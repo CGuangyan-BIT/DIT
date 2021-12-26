@@ -1,4 +1,4 @@
-# Full Transformer Framework for Rpbust Point Cloud Registration with Deep Information Interaction
+# Full Transformer Framework for Robust Point Cloud Registration with Deep Information Interaction
 
 ![DIT-architecture](figures/DIT-arch.png)
 
