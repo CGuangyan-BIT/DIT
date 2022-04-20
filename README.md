@@ -1,6 +1,6 @@
 # Full Transformer Framework for Robust Point Cloud Registration with Deep Information Interaction. [arxiv](https://arxiv.org/abs/2112.09385)
 
-![DIT-architecture](figures/DIT-arch.png)
+![DIT-architecture](DIT_arch.png)
 
 This repository contains python scripts for training and testing [Deep Interaction Transformer (DIT)]
 
