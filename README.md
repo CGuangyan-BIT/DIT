@@ -1,6 +1,6 @@
 # Full Transformer Framework for Rpbust Point Cloud Registration with Deep Information Interaction
 
-![DIT-architecture](DIT_arch.png)
+![DIT-architecture](DIFT_arch.png)
 
 This repository contains python scripts for training and testing [Deep Interaction Transformer (DIT)]
 
@@ -27,53 +27,56 @@ pip install -r requirements.txt
   
 ## Training
 
-Run the relevant commands below. We use the ModelNet40 dataset for this work, which will be automatically downloaded if necessary.
-Train the DIT on the clean point clouds as
-  
-```bash
-cd DIT/experiments
-sh 1_train_clean.sh
-```
-  
-Train the DIT on the low noise partial-to-partial point clouds as
-  
-```bash
-cd DIT/experiments
-sh 1_train_low_noise_partial.sh
-```
+You can run the relevant commands under the /DIT path to train the DIT model in a specific environment, the network parameters will be saved in the /models folder. Specifically, we use the ModelNet40 dataset for this work, which will be automatically downloaded if necessary.
 
-Train the DIT on the high noise partial-to-partial point clouds as
+Train the DIT on the clean, low noise partial, high noise partial point clouds as
   
 ```bash
-cd DIT/experiments
-sh 1_train_high_noise_partial.sh
+sh experiments/1_train_clean.sh
+```
+  
+```bash
+sh experiments/1_train_low_noise_partial.sh
+```
+  
+```bash
+sh experiments/1_train_high_noise_partial.sh
 ```
   
 ## Evaluation
 
 We provide
-- pretrained models on ModelNet40 in clear, low noise partial, high noise partial point clouds. You can download it from this link [weight](https://drive.google.com/file/d/1vwtnSG3YAeVRRgCBVaRAIn_mC6Nnb7-U/view?usp=sharing). Unzip and place it in the [checkpoints/models](checkpoints/models) folder.
+- pretrained models on ModelNet40 on clean, low noise partial, high noise partial point clouds. You can download it from this link [weight](https://drive.google.com/file/d/1z2TSNtoK2-zQ_bkcBYk4XwEqZOpdN2GZ/view?usp=sharing). Unzip and place it in the **/DIT** folder, such that there are three pretrained models under the **/DIT/models** path;
+- three files **1_eval_clean.sh**, **1_eval_low_noise_partial.sh**, **1_eval_high_noise_partial.sh** to evaluate the DIT model on clean, low noise partial, high noise partial point clouds in /experiments folder;
+- three files **1_eval_clean_vis.sh**, **1_eval_low_noise_partial_vis.sh**, **1_eval_high_noise_partial_vis.sh** to visualize the DIT registration process on clean, low noise partial, high noise partial point clouds in **/experiments** folder;
   
-Evaluate the DIT by running the relevant commands below.
-If you want the evaluate the training result, you can change the model path in sh file.
+You can run the relevant commands under the **/DIT** path to evaluate the DIT model in a specific environment. If you want to evaluate your training results, you can change the model path in the sh file directly
   
-Evaluate the DIT on the clean point clouds as
+Evaluate the DIT on the clean, low noise partial, high noise partial point clouds as
   
 ```bash
-cd DIT/experiments
-sh 1_eval_clean.sh
+sh experiments/1_eval_clean.sh
 ```
   
-Evaluate the DIT on the low noise partial-to-partial point clouds as
-  
 ```bash
-cd DIT/experiments
-sh 1_eval_low_noise_partial.sh
+sh experiments/1_eval_low_noise_partial.sh
 ```
   
-Evaluate the DIT on the high noise partial-to-partial point clouds as
+```bash
+sh experiments/1_eval_high_noise_partial.sh
+```
+
+You can run the relevant commands under the /DIT path to visualize the DIT registration process in a specific environment as
+
+
+```bash
+sh experiments/1_eval_clean_vis.sh
+```
+
+```bash
+sh experiments/1_eval_low_noise_partial_vis.sh
+```
   
 ```bash
-cd DIT/experiments
-sh 1_eval_high_noise_partial.sh
+sh experiments/1_eval_high_noise_partial_vis.sh
 ```
