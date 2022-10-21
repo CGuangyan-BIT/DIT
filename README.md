@@ -1,6 +1,6 @@
 # Full Transformer Framework for Rpbust Point Cloud Registration with Deep Information Interaction
 
-![DIT-architecture](DIFT_arch.png)
+![DIT-architecture](DIT_arch.png)
 
 This repository contains python scripts for training and testing [Deep Interaction Transformer (DIT)]
 
